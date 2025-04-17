@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Reminder Generator - Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Redirect to landing page if user visits the root or reminder-generator folder
+        if (window.location.pathname === '/' || window.location.pathname.endsWith('/reminder-generator')) {
+            window.location.href = '/reminder-generator/index.html';
+        }
+    </script>
+</head>
+    <body class="bg-gray-50 font-sans">
+        <div class="min-h-screen flex flex-col justify-center items-center px-12 py-40 max-w-3xl mx-auto bg-white rounded-3xl shadow-lg my-12">
+            <h1 class="text-5xl font-extrabold mb-12 text-gray-900 tracking-tight text-center">ASTEROOM REMINDER GENERATOR</h1>
+            <div class="flex space-x-8">
+                <a href="aloware.html" class="w-36 text-center px-10 py-5 bg-blue-300 text-white rounded-3xl shadow-lg hover:bg-blue-400 transition font-semibold text-lg">Aloware</a>
+                <a href="email.html" class="w-36 text-center px-10 py-5 bg-green-300 text-white rounded-3xl shadow-lg hover:bg-green-400 transition font-semibold text-lg">Email</a>
+            </div>
+        </div>
+    </body>
+</html>
