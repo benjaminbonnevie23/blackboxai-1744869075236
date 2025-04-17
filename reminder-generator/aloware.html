@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aloware Reminder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 font-sans">
+    <div class="min-h-screen flex flex-col justify-center items-center px-12 py-40 max-w-3xl mx-auto bg-white rounded-3xl shadow-lg my-12">
+        <h1 class="text-5xl font-extrabold mb-12 text-gray-900 tracking-tight text-center">Aloware Reminder</h1>
+        <form class="w-full max-w-lg space-y-6">
+            <div>
+                <label for="dropdown1" class="block mb-2 font-semibold text-gray-700">Select Reminder Type</label>
+                <select id="dropdown1" name="dropdown1" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    <option value="pdr-normal">PDR Normal</option>
+                    <option value="pdr-offerpad">PDR Offerpad</option>
+                    <option value="pdr-reo-xpress-sundae">PDR REO Xpress and Sundae</option>
+                    <option value="da-fannie-mae">DA Fannie Mae</option>
+                    <option value="da-rebuilt">DA Rebuilt</option>
+                    <option value="ei-nvs">EI NVS</option>
+                    <option value="ei-solidifi">EI Solidifi</option>
+                </select>
+            </div>
+            <div>
+                <label for="dcName" class="block mb-2 font-semibold text-gray-700">DC Name</label>
+                <input type="text" id="dcName" name="dcName" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" />
+            </div>
+            <div>
+                <label for="taskId" class="block mb-2 font-semibold text-gray-700">Task ID</label>
+                <input type="text" id="taskId" name="taskId" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" />
+            </div>
+            <div>
+                <label for="address" class="block mb-2 font-semibold text-gray-700">Address</label>
+                <input type="text" id="address" name="address" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" />
+            </div>
+            <div>
+                <label for="schedule" class="block mb-2 font-semibold text-gray-700">Schedule</label>
+                <input type="text" id="schedule" name="schedule" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" />
+            </div>
+            <div>
+                <label for="totalPay" class="block mb-2 font-semibold text-gray-700">Total Pay</label>
+                <input type="text" id="totalPay" name="totalPay" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" />
+            </div>
+            <div class="flex justify-between mt-8 space-x-4">
+                <button type="button" onclick="window.location.href='index.html'" class="flex-1 px-6 py-3 bg-blue-300 text-white rounded-3xl shadow-lg hover:bg-blue-400 transition font-semibold text-lg">Back</button>
+                <button type="submit" class="flex-1 px-6 py-3 bg-blue-300 text-white rounded-3xl shadow-lg hover:bg-blue-400 transition font-semibold text-lg">Generate</button>
+            </div>
+        </form>
+    </div>
+    <script src="js/aloware.js"></script>
+</body>
+</html>
