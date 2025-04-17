@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Generated Reminder Output</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 font-sans">
+    <div class="min-h-screen flex flex-col justify-center items-center px-6 py-12 max-w-4xl mx-auto bg-white rounded-3xl shadow-lg">
+        <h1 class="text-4xl font-bold mb-8 text-gray-900">Generated Reminder</h1>
+        <textarea id="outputText" class="w-full h-96 p-4 border border-gray-300 rounded-md resize-y text-gray-800 font-mono whitespace-pre-wrap"></textarea>
+        <div class="flex justify-between mt-8 space-x-4 w-full max-w-lg">
+            <button id="copyBtn" class="flex-1 px-6 py-3 bg-blue-300 text-white rounded-3xl shadow-lg hover:bg-blue-400 transition font-semibold text-lg">Copy to Clipboard</button>
+            <button id="backBtn" class="flex-1 px-6 py-3 bg-gray-300 text-gray-700 rounded-3xl shadow-lg hover:bg-gray-400 transition font-semibold text-lg">Generate Another Reminder</button>
+        </div>
+    </div>
+    <script>
+        // Get the reminder text and type from localStorage and display it
+        const outputText = document.getElementById('outputText');
+        const reminder = localStorage.getItem('generatedReminder') || 'No reminder generated yet.';
+        const reminderType = localStorage.getItem('reminderType') || '';
+
+        outputText.value = reminder;
+
+        // Remove the output button functionality as per user request
+        // No additional button will be displayed
+
+        // Copy to clipboard functionality
+        document.getElementById('copyBtn').addEventListener('click', () => {
+            outputText.select();
+            outputText.setSelectionRange(0, 99999); // For mobile devices
+            navigator.clipboard.writeText(outputText.value).then(() => {
+                alert('Copied to clipboard!');
+            });
+        });
+
+        // "Generate Another Reminder" button navigates back to the landing page
+        document.getElementById('backBtn').addEventListener('click', () => {
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
